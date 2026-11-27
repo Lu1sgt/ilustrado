@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilustrado — Great Books Interactive Archive</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Great Books Project · Miguel Syjuco</p>
+      <h1><em>Ilustrado</em> Archive &amp; Literary Index</h1>
+      <p class="subtitle">
+        A static, searchable index of characters, nested fictional works, plot arcs,
+        settings, and core themes from <em>Ilustrado</em>.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Filter and search entries">
+      <div class="search-box">
+        <label for="searchInput" class="visually-hidden">Search entries</label>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search names, works, themes, or places..."
+        />
+      </div>
+      <div id="filterButtons" class="filter-buttons" role="group" aria-label="Category filters"></div>
+    </section>
+
+    <p id="resultsCount" class="results-count"></p>
+
+    <section id="cardsGrid" class="cards-grid" aria-live="polite"></section>
+  </main>
+
+  <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button id="closeModalBtn" class="modal-close" aria-label="Close details">×</button>
+      <p id="modalCategory" class="badge"></p>
+      <h2 id="modalTitle"></h2>
+      <p id="modalMeta" class="modal-meta"></p>
+      <p id="modalSummary"></p>
+      <h3>Analytical &amp; Great Books Notes</h3>
+      <p id="modalAnalysis"></p>
+      <ul id="modalHighlights" class="highlights-list"></ul>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Great Books Static Project · Built with HTML, CSS, and client-side JavaScript.
+      </p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
