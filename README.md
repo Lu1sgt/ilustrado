@@ -1,22 +1,26 @@
-# ilustrado
+# Ilustrado — Interactive Archive & Literary Index
 
-An interactive, zero-backend archive and literary index for Miguel Syjuco's *Ilustrado*, built as a Great Books course project.
+A static, zero-backend website for a Great Books course project on Miguel Syjuco's novel *Ilustrado*. It turns the novel's characters, nested fictional works, plot arcs, settings, and themes into a searchable, browsable archive.
 
-## Features
+**Live site:** https://lu1sgt.github.io/ilustrado/
 
-- Searchable index of characters, nested works, plot/setting, and themes
-- Category filters with live result counts
-- Detail modal with summaries, critical analysis, and key highlights
-- Accessible keyboard support (Esc to close, focus restoration)
+## What the site does
 
-## Files
+- **Search** across names, works, places, themes, and notes
+- **Filter** by category: Characters, Nested Works, Plot & Setting, and Themes & Values
+- **Read detailed notes** for each entry in a modal, including a summary, critical/Great Books analysis, and key textual highlights
+- **Navigate by keyboard** — press `Esc` to close the detail view, with focus restored to the card you opened
+- Runs entirely in the browser: no server, database, or build step
+
+## Project structure
 
 ```text
 .
 ├── index.html   # Page structure
 ├── styles.css   # Layout and visual design
 ├── data.js      # Archive entries (edit this to add content)
-└── app.js       # Search, filtering, and modal logic
+├── app.js       # Search, filtering, and modal logic
+└── .nojekyll    # Tells GitHub Pages to serve files directly
 ```
 
 ## Run locally
@@ -45,7 +49,6 @@ Append objects to the `ARCHIVE_ITEMS` array in `data.js`:
 }
 ```
 
-## Deploy
+## Deployment
 
-- **Netlify:** drag the project folder into the Netlify deploy area.
-- **GitHub Pages:** push to a public repo, then enable Pages from the main branch root.
+Hosted with **GitHub Pages** from the `main` branch root. Any push to `main` updates the live site automatically.
